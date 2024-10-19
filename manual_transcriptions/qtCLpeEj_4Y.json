@@ -1,0 +1,29 @@
+{
+    "text": " Z\u50cf\u4e00\u500b\u7b11\u884c\u5a66\uc804",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.1,
+            "text": " Z\u50cf\u4e00\u500b\u7b11\u884c\u5a66\uc804",
+            "tokens": [
+                50364,
+                1176,
+                12760,
+                8990,
+                11600,
+                8082,
+                26112,
+                99,
+                8210,
+                50569
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -6.23268612948331,
+            "compression_ratio": 0.7096774193548387,
+            "no_speech_prob": 0.4950367212295532
+        }
+    ],
+    "language": "es"
+}

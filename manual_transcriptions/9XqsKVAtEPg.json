@@ -1,0 +1,22 @@
+{
+    "text": " Design",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 10.88,
+            "text": " Design",
+            "tokens": [
+                50364,
+                12748,
+                50908
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -5.327853202819824,
+            "compression_ratio": 0.42857142857142855,
+            "no_speech_prob": 0.5859771370887756
+        }
+    ],
+    "language": "es"
+}

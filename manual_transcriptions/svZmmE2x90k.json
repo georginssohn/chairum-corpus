@@ -1,0 +1,28 @@
+{
+    "text": " Tutaj tenemos el video plunger,",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 29.46,
+            "text": " Tutaj tenemos el video plunger,",
+            "tokens": [
+                50364,
+                41819,
+                9914,
+                806,
+                960,
+                37663,
+                260,
+                11,
+                51837
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.152300643920898,
+            "compression_ratio": 0.7948717948717948,
+            "no_speech_prob": 0.5047836303710938
+        }
+    ],
+    "language": "es"
+}

@@ -1,0 +1,43 @@
+{
+    "text": " Estamos aAutism Ya ver\u00e1n",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 7.26,
+            "text": " Estamos aAutism",
+            "tokens": [
+                50364,
+                34563,
+                257,
+                49769,
+                1434,
+                50727
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.222949394812951,
+            "compression_ratio": 0.7575757575757576,
+            "no_speech_prob": 0.4688328802585602
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 7.26,
+            "end": 17.04,
+            "text": " Ya ver\u00e1n",
+            "tokens": [
+                50727,
+                6080,
+                1306,
+                7200,
+                51216
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.222949394812951,
+            "compression_ratio": 0.7575757575757576,
+            "no_speech_prob": 0.4688328802585602
+        }
+    ],
+    "language": "es"
+}

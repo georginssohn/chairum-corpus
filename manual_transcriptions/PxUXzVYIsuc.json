@@ -1,0 +1,47 @@
+{
+    "text": " Un closing \u00a1Suscr\u00edbete al canal!",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.5,
+            "text": " Un closing",
+            "tokens": [
+                50364,
+                1156,
+                10377,
+                50589
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.7212779998779295,
+            "compression_ratio": 0.5555555555555556,
+            "no_speech_prob": 0.4791654646396637
+        },
+        {
+            "id": 1,
+            "seek": 9000,
+            "start": 90.0,
+            "end": 96.0,
+            "text": " \u00a1Suscr\u00edbete al canal!",
+            "tokens": [
+                50364,
+                6514,
+                50,
+                301,
+                10757,
+                49662,
+                3498,
+                419,
+                9911,
+                0,
+                50664
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.8393140633900961,
+            "compression_ratio": 0.7419354838709677,
+            "no_speech_prob": 0.8488964438438416
+        }
+    ],
+    "language": "es"
+}

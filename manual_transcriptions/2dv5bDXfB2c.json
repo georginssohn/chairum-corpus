@@ -1,0 +1,68 @@
+{
+    "text": " papers de la Comisi\u00f3n eighty-nine presidencia el \u00a1Cuidado!",
+    "segments": [
+        {
+            "id": 0,
+            "seek": 0,
+            "start": 0.0,
+            "end": 6.4,
+            "text": " papers de la Comisi\u00f3n eighty-nine",
+            "tokens": [
+                50364,
+                10577,
+                368,
+                635,
+                2432,
+                36515,
+                26348,
+                12,
+                46140,
+                50684
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.334185431985294,
+            "compression_ratio": 0.8596491228070176,
+            "no_speech_prob": 0.5106555223464966
+        },
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 12.4,
+            "end": 20.92,
+            "text": " presidencia el",
+            "tokens": [
+                50984,
+                1183,
+                4380,
+                2755,
+                806,
+                51410
+            ],
+            "temperature": 1.0,
+            "avg_logprob": -4.334185431985294,
+            "compression_ratio": 0.8596491228070176,
+            "no_speech_prob": 0.5106555223464966
+        },
+        {
+            "id": 2,
+            "seek": 6000,
+            "start": 60.0,
+            "end": 62.0,
+            "text": " \u00a1Cuidado!",
+            "tokens": [
+                50364,
+                6514,
+                35222,
+                327,
+                1573,
+                0,
+                50464
+            ],
+            "temperature": 0.0,
+            "avg_logprob": -0.691027045249939,
+            "compression_ratio": 0.5555555555555556,
+            "no_speech_prob": 0.6955187916755676
+        }
+    ],
+    "language": "es"
+}
