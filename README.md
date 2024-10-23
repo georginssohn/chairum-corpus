@@ -4,20 +4,17 @@
 ![black](https://github.com/ivansabik/chairum-corpus/actions/workflows/black.yml/badge.svg)
 ![isort](https://github.com/ivansabik/chairum-corpus/actions/workflows/isort.yml/badge.svg)
 
-![Mexico is fine](./thij_ij_fine.png)
+A corpus of publicly available speeches from Mexican presidents:
+- Andres Manuel Lopez Obrador
+- Claudia Sheinbaum Pardo
 
-A corpus of publicly available speeches from Mexican president Andres Manuel Lopez Obrador. 
 Currently data is sourced exclusively from YouTube. For some videos it was not possible to get the automatically generated subtitles to source the transcriptions, for those cases a transcription is done using Open AI Whisper.
-
-*Image source: https://twitter.com/marianojuarez/status/1148739501604450304*
 
 Currently there is no interface or API where the data can be queried (coming in future iterations), but it's really simple to do using a text editor, for example using Visual Studio:
 
 ![Search locally](./simple_search.gif)
 
 ## Data
-
-The data is available as a CSV file: https://www.kaggle.com/datasets/ivansabik/andres-manuel-lopez-obrador-amlo-speeches
 
 Individual files in JSON format are also provided under the `data` folder. Additionally, a script is provided to generate a file in CSV format with all records. Sample record:
 
@@ -100,6 +97,3 @@ python generate_csv.py
     - Handle gracefully phonetic coincidences (Krauze, Krause, Kraus, Krauz) using something like Metaphone or Baider-Morse
 - Add simple app to search and query the data
 - Add new field with transcribed text without stop words
-- Exclude videos from speeches where main speaker is not AMLO (or does not include him)
-- Exclude videos which are not from a speech or conference
-- Filter out or annotate parts of videos where speaker is not AMLO. Even better add a new field with the speaker, but this could be quite challenging and would require manual work and curation
