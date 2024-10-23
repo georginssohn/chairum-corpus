@@ -61,6 +61,7 @@ def _process_video(video_metadata):
 
     # Retrieve or generate transcriptions
     failed_path = f"failed/{video_id}.json"
+    succeeded_path = f"data/{video_id}.json"
     logger.info("Obtaining transcriptions", extra={"video_id": video_id})
     try:
         transcription_with_timestamps = YouTubeTranscriptApi.get_transcript(
@@ -68,7 +69,7 @@ def _process_video(video_metadata):
         )
     except _errors.TranscriptsDisabled:
         logger.warning("Transcripts are disabled", extra={"video_id": video_id})
-        with open(failed_path, "w") as _file:
+        with open(succeeded_path, "w") as _file:
             json.dump(video_metadata, _file, indent=4)
         return
     # See https://github.com/jdepoix/youtube-transcript-api/issues/320
