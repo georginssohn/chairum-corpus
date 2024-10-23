@@ -12,6 +12,7 @@ videos = [f for f in os.listdir("failed")]
 
 all_data = []
 for video in videos:
+    logger.info("Checking if video exists", extra={"video": video})
     _video_metadata_file = f"failed/{video}"
     with open(_video_metadata_file) as _file:
         video_metadata = json.load(_file)
@@ -20,14 +21,15 @@ for video in videos:
     if os.path.isfile(f"manual_transcriptions/{video}"):
         continue
 
-    logger.info("Downloading video", extra={"video_id": video_id})
+    download_path = f"/tmp/{video_id}.mp4"
+    logger.info("Downloading video", extra={"video_id": video_id, "path": download_path})
     video_url = f"https://www.youtube.com/watch?v={video_id}"
     try:
         audio_file = (
             YouTube(video_url)
             .streams.filter(only_audio=True)
             .first()
-            .download(filename=f"/tmp/{video_id}.mp4")
+            .download(filename=download_path)
         )
     # KeyError: 'content-length'
     except KeyError:
@@ -44,6 +46,10 @@ for video in videos:
     # EMb7n2q5qSc is streaming live and cannot be loaded
     except exceptions.LiveStreamError:
         logger.error("Failed obtaining audio (LiveStreamError)", extra={"video_id": video_id})
+        continue
+    # pytubefix.exceptions.VideoUnavailable: -1heJN4R77Y is unavailable
+    except exceptions.VideoUnavailable:
+        logger.error("Failed obtaining audio (VideoUnavailable)", extra={"video_id": video_id})
         continue
     logger.info("Transcribing video", extra={"video_id": video_id})
     whisper_model = whisper.load_model("medium")
@@ -74,7 +80,9 @@ for video in videos:
     if not video_metadata.get("videoInfo"):
         published_time_text = video_metadata["publishedTimeText"]["simpleText"]
         video_length = video_metadata["lengthText"]["accessibility"]["accessibilityData"]["label"]
-        video_length_seconds = TimeLength(video_length).total_seconds
+        video_length_seconds = TimeLength(video_length)
+        assert video_length_seconds.result.success
+        video_length_seconds = video_length_seconds.result.seconds
         video_length_seconds = int(video_length_seconds)
     else:
         published_time_text = video_metadata["videoInfo"]["runs"][-1]["text"]
